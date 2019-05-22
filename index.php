@@ -22,9 +22,23 @@ require_once("config.php");
 
 //echo json_encode($busca);
 
+//$usuario = new Usuario();
+
+//$usuario->login("Orland","mypassword");
+
+//echo $usuario;
+
+//$aluno = new Usuario("Wagner", "CDDTuc");//foi criado o método construct que permite passar os dados direto pela instância do objeto sem precisar chamar os setters
+
+//$aluno->insert();
+
+//echo $aluno;
+
 $usuario = new Usuario();
 
-$usuario->login("Orland","mypassword");
+$usuario->loadById(8);
+
+$usuario->update("Arlindo", "negao20");
 
 echo $usuario;
 
